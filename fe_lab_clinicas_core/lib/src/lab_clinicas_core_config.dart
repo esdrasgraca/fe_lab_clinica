@@ -23,7 +23,7 @@ class LabClinicasCoreConfig extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlutterGetIt(
+    return FlutterGetIt(      
       debugMode: kDebugMode,
       bindings: bindings,
       pages: [...pages ?? [], ...pagesBuilders ?? []],
@@ -33,6 +33,7 @@ class LabClinicasCoreConfig extends StatelessWidget {
           loader: LabClinicasLoader(),
           builder: (navigatorObserver) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               theme: LabClinicasTheme.lightTheme,
               darkTheme: LabClinicasTheme.darkTheme,
               navigatorObservers: [
