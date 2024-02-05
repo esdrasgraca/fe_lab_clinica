@@ -27,19 +27,21 @@ class _SelfServicePageState extends State<SelfServicePage> with MessageViewMixin
         switch(step) {
           
           case FormSteps.none:
-           return;
-          case FormSteps.whoIAm:
+            return;
+            case FormSteps.whoIAm:
             baseRoute += 'whoIAm';           
           case FormSteps.findPatient:
-          baseRoute += 'find-patient';           
+            baseRoute += 'find-patient';           
           case FormSteps.patient:
-          baseRoute += 'patient';           
+            baseRoute += 'patient';           
           case FormSteps.documents:
-          baseRoute += 'documents';           
+            baseRoute += 'documents';           
           case FormSteps.done:
-          baseRoute += 'done';           
+            baseRoute += 'done';           
           case FormSteps.restart:
-           return;
+            Navigator.of(context).popUntil(ModalRoute.withName('/self-service'));
+            controller.startProcess();
+            return;
         }
         Navigator.of(context).pushNamed(baseRoute);
       });
