@@ -1,6 +1,7 @@
 import 'package:fe_lab_clinicas_core/fe_lab_clinicas_core.dart';
+import 'package:fe_lab_clinicas_self_service/src/model/self_service_model.dart';
 import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/widgets/document_box.dart';
-import 'package:fe_lab_clinicas_self_service/src/modules/self_service/documents/widgets/lab_clinicas_self_service_app_bar.dart';
+import 'package:fe_lab_clinicas_self_service/src/core/widgets/lab_clinicas_self_service_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 
@@ -15,9 +16,9 @@ class DocumentsPage extends StatefulWidget {
   State<DocumentsPage> createState() => _DocumentsPageState();
 }
 
-  _DocumentsPageState({
-    required this.selfServiceController
-  });
+  // _DocumentsPageState({
+  //   required this.selfServiceController
+  // });
 class _DocumentsPageState extends State<DocumentsPage> with MessageViewMixin {
   final selfServiceController = Injector.get<SelfServiceController>();
 

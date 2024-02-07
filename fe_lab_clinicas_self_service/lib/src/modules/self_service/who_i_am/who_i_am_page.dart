@@ -108,8 +108,8 @@ class _WhoIAmPageState extends State<WhoIAmPage> {
                         TextFormField(
                           // obscureText: controller.obscurePassword,
                           controller: lastNameEC,
-                          decoration: InputDecoration(
-                            label: const Text('Digite seu sobrenome'),
+                          decoration: const InputDecoration(
+                            label: Text('Digite seu sobrenome'),
                             // suffixIcon: IconButton(
                             //   onPressed: () {
                             //     controller.passwordToggle();
